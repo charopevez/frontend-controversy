@@ -1,0 +1,59 @@
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 100px;
+  height: 150px;
+  display: inline-block;
+  margin: 10px;
+}
+.card.flip {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.card.cah-prompt {
+  background-color: #000000;
+  color: #ffffff;
+  border: solid 5px #ffffff;
+  border-radius: 25px;
+}
+.card.cah-prompt > div,
+.card.cah-response > div {
+  margin: 10px 5px;
+}
+
+.card.cah-response {
+  background-color: #ffffff;
+  color: #000000;
+  border: solid 5px #000000;
+  border-radius: 25px;
+}
+
+.card .face {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0.1px);
+}
+.card .down {
+  transform: rotateY(180deg);
+}
+.card .face {
+  border-radius: 10px;
+}
+
+.card .down {
+  font-size: 18px;
+  line-height: 1.4em;
+  background-size: cover;
+}
